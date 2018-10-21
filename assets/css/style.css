@@ -1,0 +1,41 @@
+body {
+    background-color:#ecebeb;
+}
+    
+h1 {
+    font-family: 'Simonetta', cursive;
+    /*text-transform: uppercase;*/
+    font-variant: small-caps;
+    text-align: center;
+    background-image:linear-gradient(#7083be, #364071);
+    text-shadow: 2px 2px black;
+    color: #ecebeb;
+    /*border: 1px solid red;*/
+    margin: 0px;
+    padding: 20px;
+}
+
+.jumbotron {
+    background-color: #7083be;
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+.btn {
+    font-family: 'Simonetta', cursive;
+    /*border: 10px solid green;*/
+    margin:150px 0px 0px 45%;
+    padding: 5px 40px 5px 40px;
+    font-size: 30px;
+    background-image:linear-gradient(#7083be, #364071);
+    color: #ecebeb;
+    text-shadow: 2px 2px black;
+}
+
+.background-image {
+    border: 1px solid red;
+    height: 500px;
+    margin-top: 100px;
+}
