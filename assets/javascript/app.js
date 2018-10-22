@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
     var backImg = "assets/images/frasiercast.jpg "
+    var number = 5;
     var correctAnswer = 0;
-    var questions = [{
+    var questionairre = [{
         question: "What song does Frasier sing on his PBS fundraising appearance?",
         answers: ["Three Little Maids", "an aria", "Buttons and Bows", "Tossed Salad and Scrambled Eggs"],
         correctAnswer: 2
@@ -22,8 +23,9 @@ $(document).ready(function(){
         answers: ["Cliff Claven(John Ratzenberger)", "Sam Malone(Ted Danson)", "Diane Chambers(Shelly Long)", "Rebecca Howe,(Kirsty Alley)"],
         correctAnswer: 3
     }
-    ]  
+]
 
+    //sets background image on opening page
     backgroundImage = $("<img>");
     $("#background").append(backgroundImage);
     backgroundImage.attr({
@@ -31,6 +33,7 @@ $(document).ready(function(){
         "class": 'cast-img',
     });
 
+    //click button to start quiz
     startButton = $("<button>");
     $(".content").append(startButton);
     startButton.attr({
@@ -40,43 +43,33 @@ $(document).ready(function(){
 
     $(".btn").text("Play");
 
+
+    questionArray = $("<div>");
+    $(".content").append(questionArray);
+    questionArray.attr({
+        "class": "questions",
+    });
+
+    //displays time remaining to answer questions
+    function timer(){
+        setTimeout(timer, 1000);
+        $(".timer").html("Time Remaining " + number);
+        number--;
+
+        if (number < 0){
+            number = 0;
+        }
+        console.log("endgame");
+    };
+
+timer();
+
 //pre-game start screen
 //function to initiate game
 //questions for user to answer
 //display of answers and final score
 //assigned DOM elements
 
-/*var time = 0;
 
-function start(){
-    intervalId = setInterval(count, 1000);
-}
-
-function count(){
-    time--;
-    var converted = timeConverter(time);
-    $("display").text(converted);
-}console.log(count);
-
-function timeConverter(t) {
-
-    var minutes = Math.floor(t / 60);
-    var seconds = t - (minutes * 60);
-    
-    if (seconds < 10) {
-        seconds = "0" + seconds;
-    }
-    
-    if (minutes === 0) {
-         minutes = "00";
-    }
-    else if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-    
-    return minutes + ":" + seconds;
-    }
-
-    start();*/
 
 });
