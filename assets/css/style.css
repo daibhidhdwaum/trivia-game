@@ -26,16 +26,39 @@ h1 {
 .btn {
     font-family: 'Simonetta', cursive;
     /*border: 10px solid green;*/
-    margin:150px 0px 0px 45%;
     padding: 5px 40px 5px 40px;
     font-size: 30px;
     background-image:linear-gradient(#7083be, #364071);
     color: #ecebeb;
     text-shadow: 2px 2px black;
+    float: left;
 }
 
 .background-image {
-    border: 1px solid red;
+    border: 1px solid black;
     height: 500px;
-    margin-top: 100px;
+    margin-top: 55px;
+    padding: 0px;
+    float: left;
+}
+
+.cast-img {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+}
+
+.second {
+    font-family: 'Simonetta', cursive;
+    font-size: 100px;
+}
+
+.timer {
+    width: 300px;
+    height: 140px;
+    background-color: red;
+    color: black;
+    text-align: center;
+    float: left;
 }
