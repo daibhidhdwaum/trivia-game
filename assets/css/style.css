@@ -46,7 +46,7 @@ start page
     width: 100%;
     border-radius: 25px;
     margin-top: 10px;
-
+    margin-bottom: 50px;
 }
 
 .background-image {
@@ -89,9 +89,17 @@ main
     background-image:linear-gradient(#313233, #000000);
     color: #ecebeb;
     text-shadow: 2px 2px black;
+    width: 100%;
     border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 50px;
 }
 
 /*----------------
 end page
 -----------------*/
+
+.results {
+    border: 1px solid red;
+    width: 200px;
+}

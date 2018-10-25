@@ -61,6 +61,12 @@ $(document).ready(function(){
     $(".submit").text("Submit");
     $(".submit").hide();
 
+    results = $("<div>");
+    $(".results").append(results);
+    results.attr({
+        "class": "results",
+    });
+
     //start game function
     $(".btn").on("click", function(){
         timer();
@@ -71,14 +77,23 @@ $(document).ready(function(){
         $(".submit").show();
     });
 
+    $(".submit").on("click", function(){
+        $(".results").show();
+        $(".questions").hide();
+        $(".submit").hide();
+        $(".timer").hide();
+    });
+
     //displays time remaining to answer questions
     function timer(){
         setTimeout(timer, 1000);
         $(".timer").html("Time Remaining " + number);
         number--;
 
+        //game logic
         if (number < 0){
             number = 0;
+            $(".submit").hide();
         }
         console.log("endgame");
     };
