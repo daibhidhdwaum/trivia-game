@@ -1,8 +1,11 @@
 $(document).ready(function(){
 
     var backImg = "assets/images/frasiercast.jpg "
-    var number = 60;
+    var number = 5;
     var correctAnswer = 0;
+
+    //ran out of time to figure out how to make this functional
+
 /*    var questionairre = [{
         question: "What song does Frasier sing on his PBS fundraising appearance?",
         answers: ["Three Little Maids", "an aria", "Buttons and Bows", "Tossed Salad and Scrambled Eggs"],
@@ -70,6 +73,8 @@ $(document).ready(function(){
         "class": "results",
     });
     $(".results").hide();
+    $(".results").html("<h3>Results</h3>");
+    $(".results").html("<p>Your Score: </p>");
 
     //start game on click event
     $(".btn").on("click", function(){
@@ -106,7 +111,10 @@ $(document).ready(function(){
         if (number < 0){
             number = 0;
             $(".submit").hide();
-        }
+            $(".questions").hide();
+            $(".timer").hide();
+            $(".results").show();
+            }
     };
 
 });
