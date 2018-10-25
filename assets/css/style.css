@@ -1,10 +1,22 @@
 body {
     background-color:#ecebeb;
 }
+
+/*-------------
+header
+--------------*/
+
+.jumbotron {
+    background-color: #7083be;
+    background-image: url(../assets/images/frasiertitle.jpg);
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    
+}
     
 h1 {
     font-family: 'Simonetta', cursive;
-    /*text-transform: uppercase;*/
     font-variant: small-caps;
     text-align: center;
     background-image:linear-gradient(#7083be, #364071);
@@ -15,28 +27,31 @@ h1 {
     padding: 20px;
 }
 
-.jumbotron {
-    background-color: #7083be;
-    background-image: url(../assets/images/frasiertitle.jpg);
-    height: 100px;
-    margin: 0px;
-    padding: 0px;
-    
+/*--------------
+start page
+---------------*/
+
+.content{
+    margin-top: 50px;
 }
 
 .btn {
-    font-family: 'Simonetta', cursive;
+    font-family: 'Libre Baskerville', serif;
     /*border: 10px solid green;*/
     padding: 5px 40px 5px 40px;
     font-size: 30px;
-    background-image:linear-gradient(#7083be, #364071);
+    background-image:linear-gradient(#313233, #000000);
     color: #ecebeb;
     text-shadow: 2px 2px black;
+    width: 100%;
+    border-radius: 25px;
+    margin-top: 10px;
+
 }
 
 .background-image {
     border: 1px solid black;
-    height: 500px;
+    height: 891px;
     margin-top: 55px;
     padding: 0px;
 }
@@ -48,22 +63,14 @@ h1 {
     
 }
 
-.second {
-    font-family: 'Libre Baskerville', serif;
-    font-size: 100px;
-}
-
-.timer {
-    width: 300px;
-    height: 140px;
-    background-color: red;
-    color: black;
-    text-align: center;
-}
+/*--------------
+main
+---------------*/
 
 .questions {
     width: 100%;
-    border:2px solid red;
+    border:2px solid black;
+    height: 500px;
 }
 
 .timer {
@@ -71,5 +78,20 @@ h1 {
     background-color: black;
     color: white;
     font-size: 40px;
-
+    text-align: center;
 }
+
+.submit {
+    font-family: 'Libre Baskerville', serif;
+    /*border: 10px solid green;*/
+    padding: 5px 40px 5px 40px;
+    font-size: 30px;
+    background-image:linear-gradient(#313233, #000000);
+    color: #ecebeb;
+    text-shadow: 2px 2px black;
+    border-radius: 25px;
+}
+
+/*----------------
+end page
+-----------------*/

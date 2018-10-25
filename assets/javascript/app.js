@@ -1,7 +1,7 @@
 $(document).ready(function(){
 
     var backImg = "assets/images/frasiercast.jpg "
-    var number = 5;
+    var number = 60;
     var correctAnswer = 0;
     var questionairre = [{
         question: "What song does Frasier sing on his PBS fundraising appearance?",
@@ -24,6 +24,16 @@ $(document).ready(function(){
         correctAnswer: 3
     }
 ]
+    //sets divs and events
+    //click button to start quiz
+    startButton = $("<button>");
+    $(".content").append(startButton);
+    startButton.attr({
+        "type": "button",
+        "class": "btn",
+    });
+    
+    $(".btn").text("Play");
 
     //sets background image on opening page
     backgroundImage = $("<img>");
@@ -33,21 +43,32 @@ $(document).ready(function(){
         "class": 'cast-img',
     });
 
-    //click button to start quiz
-    startButton = $("<button>");
-    $(".content").append(startButton);
-    startButton.attr({
-        "type": "button",
-        "class": "btn",
-    });
-
-    $(".btn").text("Play");
-
-
     questionArray = $("<div>");
     $(".content").append(questionArray);
     questionArray.attr({
         "class": "questions",
+    });
+    $(".questions").append(questionairre.question);
+    $(".questions").hide();
+
+    //submit answers and receive results
+    submitButton = $("<button>");
+    $(".content").append(submitButton);
+    submitButton.attr({
+        "type": "button",
+        "class": "submit",
+    });
+    $(".submit").text("Submit");
+    $(".submit").hide();
+
+    //start game function
+    $(".btn").on("click", function(){
+        timer();
+        $(".cast-img").hide();
+        $("#background").hide();
+        $(".btn").hide();
+        $(".questions").show();
+        $(".submit").show();
     });
 
     //displays time remaining to answer questions
@@ -62,7 +83,7 @@ $(document).ready(function(){
         console.log("endgame");
     };
 
-timer();
+
 
 //pre-game start screen
 //function to initiate game
