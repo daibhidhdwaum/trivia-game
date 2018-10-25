@@ -8,7 +8,6 @@ header
 
 .jumbotron {
     background-color: #7083be;
-    background-image: url(../assets/images/frasiertitle.jpg);
     height: 100px;
     margin: 0px;
     padding: 0px;
@@ -32,7 +31,7 @@ start page
 ---------------*/
 
 .content{
-    margin-top: 50px;
+    margin-top: 65px;
 }
 
 .btn {
@@ -70,7 +69,8 @@ main
 .questions {
     width: 100%;
     border:2px solid black;
-    height: 500px;
+    height: 1000px;
+    padding: 50px;
 }
 
 .timer {
@@ -95,11 +95,23 @@ main
     margin-bottom: 50px;
 }
 
+p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.form-check {
+    font-family: 'Libre Baskerville', serif;
+}
+
 /*----------------
 end page
 -----------------*/
 
 .results {
     border: 1px solid red;
-    width: 200px;
+    width: 300px;
+    height: 200px;
+    margin: 50%;
 }

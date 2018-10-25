@@ -3,7 +3,7 @@ $(document).ready(function(){
     var backImg = "assets/images/frasiercast.jpg "
     var number = 60;
     var correctAnswer = 0;
-    var questionairre = [{
+/*    var questionairre = [{
         question: "What song does Frasier sing on his PBS fundraising appearance?",
         answers: ["Three Little Maids", "an aria", "Buttons and Bows", "Tossed Salad and Scrambled Eggs"],
         correctAnswer: 2
@@ -23,8 +23,10 @@ $(document).ready(function(){
         answers: ["Cliff Claven(John Ratzenberger)", "Sam Malone(Ted Danson)", "Diane Chambers(Shelly Long)", "Rebecca Howe,(Kirsty Alley)"],
         correctAnswer: 3
     }
-]
-    //sets divs and events
+]*/
+
+    //assigned DOM elements
+    //sets events
     //click button to start quiz
     startButton = $("<button>");
     $(".content").append(startButton);
@@ -43,12 +45,13 @@ $(document).ready(function(){
         "class": 'cast-img',
     });
 
-    questionArray = $("<div>");
+    
+    /*questionArray = $("<div>");
     $(".content").append(questionArray);
     questionArray.attr({
         "class": "questions",
-    });
-    $(".questions").append(questionairre.question);
+    });*/
+    
     $(".questions").hide();
 
     //submit answers and receive results
@@ -62,27 +65,36 @@ $(document).ready(function(){
     $(".submit").hide();
 
     results = $("<div>");
-    $(".results").append(results);
+    $(".content").append(results);
     results.attr({
         "class": "results",
     });
+    $(".results").hide();
 
-    //start game function
+    //start game on click event
     $(".btn").on("click", function(){
         timer();
         $(".cast-img").hide();
         $("#background").hide();
         $(".btn").hide();
+        $(".results").hide();
         $(".questions").show();
         $(".submit").show();
     });
-
+    
+    //display of answers and final score
     $(".submit").on("click", function(){
         $(".results").show();
         $(".questions").hide();
         $(".submit").hide();
         $(".timer").hide();
     });
+
+    /*function startQuiz() {
+        for(var i = 0; i < questionairre.length; i++){
+            $(".question").html(questionairre.question);
+        }   console.log(questionairre.question); 
+    }*/
 
     //displays time remaining to answer questions
     function timer(){
@@ -95,17 +107,6 @@ $(document).ready(function(){
             number = 0;
             $(".submit").hide();
         }
-        console.log("endgame");
     };
-
-
-
-//pre-game start screen
-//function to initiate game
-//questions for user to answer
-//display of answers and final score
-//assigned DOM elements
-
-
 
 });
