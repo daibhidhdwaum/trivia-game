@@ -2,32 +2,7 @@ $(document).ready(function(){
 
     var backImg = "assets/images/frasiercast.jpg";
     var number = 60;
-    var correctAnswer = [2, 0, 3, 3, 4];
     var score = 0;
-
-    //ran out of time to figure out how to make this functional
-
-/*    var questionairre = [{
-        question: "What song does Frasier sing on his PBS fundraising appearance?",
-        answers: ["Three Little Maids", "an aria", "Buttons and Bows", "Tossed Salad and Scrambled Eggs"],
-        correctAnswer: 2
-    },
-    {
-        question: "Whose show follows Frasier's on the radio?",
-        answers: ["Bulldog", "Gil Chesteron", "Father Mike", "Amber Edwards"],
-        correctAnswer: 0
-        },
-    {
-        question: "What is the name of the radio station Frasier works for?",
-        answers: ["ACKL", "AKCL", "KCAL", "KACL"],
-        correctAnswer: 3
-    },
-    {
-        question: "Which Cheers co-star did not appear on Frasier?",
-        answers: ["Cliff Claven(John Ratzenberger)", "Sam Malone(Ted Danson)", "Diane Chambers(Shelly Long)", "Rebecca Howe,(Kirsty Alley)"],
-        correctAnswer: 3
-    }
-]*/
 
     //assigned DOM elements
     //sets events
@@ -48,13 +23,6 @@ $(document).ready(function(){
         "src": backImg,
         "class": 'cast-img',
     });
-
-    
-    /*questionArray = $("<div>");
-    $(".content").append(questionArray);
-    questionArray.attr({
-        "class": "questions",
-    });*/
     
     $(".questions").hide();
 
@@ -84,7 +52,7 @@ $(document).ready(function(){
         number--;
 
         //game logic
-        if (number == 0){
+        if (number < -1){
             number = 0;
             $(".submit").hide();
             $(".questions").hide();
@@ -112,38 +80,12 @@ $(document).ready(function(){
         $(".timer").hide();
     });
 
-    /*function startQuiz() {
-        for(var i = 0; i < questionairre.length; i++){
-            $(".question").html(questionairre.question);
-        }   console.log(questionairre.question); 
-    }*/
-
  
 
     function checkScore(){
-        var question1 = document.content.questions.question1.value
-        var question2 = document.content.questions.question2.value
-        var question3 = document.content.questions.question3.value
-        var question4 = document.content.questions.question4.value
-        var question5 = document.content.questions.question5.value
+       var q1= $(".question-1").elements.value;
 
-        if (question1 == "Q12"){
-            score++
-        }
-        if (question2 === "Q1"){
-            score++
-        }
-        if ("question-three" == correctAnswer){
-            score++
-        }
-        if (".question-four" === correctAnswer){
-            score++
-        }
-        if (".question-five" === correctAnswer){
-            score++
-        }
-        $(".results").html("Your Score" + score);
-        console.log( question1);
+       console.log(q1);
     }
     
 });
