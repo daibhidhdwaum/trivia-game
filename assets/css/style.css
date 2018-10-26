@@ -116,3 +116,7 @@ end page
     height: 250px;
     margin: 200px 300px 0px 300px;
 }
+
+h3 {
+    text-align: center;
+}

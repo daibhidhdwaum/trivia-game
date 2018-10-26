@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-    var backImg = "assets/images/frasiercast.jpg "
-    var number = 5;
-    var correctAnswer = 0;
+    var backImg = "assets/images/frasiercast.jpg";
+    var number = 60;
+    var correctAnswer = [2, 0, 3, 3, 4];
+    var score = 0;
 
     //ran out of time to figure out how to make this functional
 
@@ -76,6 +77,22 @@ $(document).ready(function(){
     $(".results").html("<h3>Results</h3>");
     $(".results").html("<p>Your Score: </p>");
 
+       //displays time remaining to answer questions
+       function timer(){
+        setTimeout(timer, 1000);
+        $(".timer").html("Time Remaining " + number);
+        number--;
+
+        //game logic
+        if (number == 0){
+            number = 0;
+            $(".submit").hide();
+            $(".questions").hide();
+            $(".timer").hide();
+            $(".results").show();
+            }
+    };
+
     //start game on click event
     $(".btn").on("click", function(){
         timer();
@@ -101,20 +118,32 @@ $(document).ready(function(){
         }   console.log(questionairre.question); 
     }*/
 
-    //displays time remaining to answer questions
-    function timer(){
-        setTimeout(timer, 1000);
-        $(".timer").html("Time Remaining " + number);
-        number--;
+ 
 
-        //game logic
-        if (number < 0){
-            number = 0;
-            $(".submit").hide();
-            $(".questions").hide();
-            $(".timer").hide();
-            $(".results").show();
-            }
-    };
+    function checkScore(){
+        var question1 = document.content.questions.question1.value
+        var question2 = document.content.questions.question2.value
+        var question3 = document.content.questions.question3.value
+        var question4 = document.content.questions.question4.value
+        var question5 = document.content.questions.question5.value
 
+        if (question1 == "Q12"){
+            score++
+        }
+        if (question2 === "Q1"){
+            score++
+        }
+        if ("question-three" == correctAnswer){
+            score++
+        }
+        if (".question-four" === correctAnswer){
+            score++
+        }
+        if (".question-five" === correctAnswer){
+            score++
+        }
+        $(".results").html("Your Score" + score);
+        console.log( question1);
+    }
+    
 });
